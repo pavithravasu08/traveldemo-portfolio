@@ -1,0 +1,823 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+
+/* Logo */
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo h1 {
+    display: none;
+}
+
+.header__logo img {
+    width: 190px;
+    height: auto;
+}
+
+
+/* Navigation */
+
+.header__s1 {
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.header__s1 p {
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+/* Menu Icon */
+
+.header__s2 {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header__s2 i {
+    font-size: 20px;
+}
+
+
+/* Sign in */
+
+.header__s3 button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.header__s3 button:hover {
+    background-color: #333;
+}
+
+
+/* SEARCH */
+
+.nav-container {
+    width: 85%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+
+.nav-container__s1 h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+
+/* Search categories */
+
+.nav-container__s2 {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 25px;
+}
+
+.nav-container__s2 p {
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.nav-container__s2 p:first-child {
+    border-bottom: 2px solid #000;
+}
+
+.nav-container__s2 i {
+    margin-right: 7px;
+}
+
+
+/* Search box */
+
+.nav-container__s3 {
+    width: 75%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 5px 8px 5px 20px;
+    border: 1px solid #777;
+    border-radius: 35px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container__s3 > i {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+
+/* Input */
+
+.nav-container__s3__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.nav-container__s3__input::placeholder {
+    color: #777;
+}
+
+
+/* Ask AI */
+
+.nav-container__s3__aibtn {
+    border: none;
+    background-color: #fff;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.nav-container__s3__aibtn:hover {
+    background-color: #f2f2f2;
+}
+
+
+/* Search button */
+
+.nav-container__s3__searchbtn {
+    border: none;
+    background-color: #00aa6c;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.nav-container__s3__searchbtn:hover {
+    background-color: #008f5b;
+}
+
+
+/* Image card */
+
+.imagecard {
+    width: 85%;
+    margin: 50px auto;
+}
+
+
+/* Top destination images */
+
+.imagecard__s1 {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.imagecard__s1 > div {
+    position: relative;
+    flex: 1;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagecard__s1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imagecard__s1 > div:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Text over images */
+
+.imagecard__s1 p {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Main image card */
+
+.imagecard__s2 {
+    min-height: 350px;
+    margin-top: 25px;
+    border-radius: 12px;
+
+    background-image: url("./images/outdoor.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Dark overlay */
+
+.imagecard__s2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+/* Content */
+
+.imagecard__s2__content {
+    position: relative;
+    width: 55%;
+    padding: 70px 50px;
+    color: white;
+}
+
+.imagecard__s2__content h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.imagecard__s2__content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* Book button */
+
+.imagecard__s2__content--btn {
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    padding: 12px 25px;
+}
+
+.imagecard__s2__content--btn h3 {
+    font-size: 15px;
+}
+
+.imagecard__s2__content--btn:hover {
+    background-color: #eee;
+}
+
+
+/*  CATEGORIES */
+
+.categories {
+    width: 85%;
+    margin: 70px auto;
+}
+
+.categories h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.categories > p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+
+/* Category images */
+
+.categories__image {
+    display: flex;
+    gap: 20px;
+}
+
+.categories__image > div { /*CSS child combinator selector */
+    position: relative;
+    flex: 1;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.categories__image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.categories__image > div:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Category text */
+
+.categories__image p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* RECOMMENDED */
+
+.recommended {
+    width: 85%;
+    margin: 70px auto 25px;
+}
+
+.recommended h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.recommended p {
+    color: #555;
+}
+
+
+/* Recommended cards */
+
+.recommanded__container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.recommanded__container::-webkit-scrollbar { /*CSS pseudo-element*/
+    height: 6px;
+}
+
+.recommanded__container::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+}
+
+
+/* Individual card */
+
+.chennai {
+    min-width: 250px;
+    flex: 1;
+    position: relative;
+}
+
+.chennai img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.chennai h3 {
+    font-size: 17px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.chennai p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+
+/* INSPIRATION */
+
+.inspiration {
+    width: 85%;
+    margin: 80px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.inspiration > h3 {
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* Inspiration cards */
+
+.inspiration__images {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.inspiration__images img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.inspiration__images:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Inspiration text */
+
+.inspiration__images p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #f2f2f2;
+    margin-top: 80px;
+    padding: 50px 8% 20px;
+}
+
+.footersub {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Footer columns */
+
+.footer__s1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+.footer__s1 > div {
+    flex: 1;
+}
+
+
+/* Footer headings */
+
+.footer__s1 > div p:first-child,
+.footer__s2 p:first-child {
+    font-weight: 700;
+     margin-bottom: 15px;
+}
+
+
+/* Footer links */
+
+.footer__s1 p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer__s1 p:not(:first-child) {
+    cursor: pointer;
+}
+
+.footer__s1 p:not(:first-child):hover {
+    text-decoration: underline;
+}
+
+
+/* Tripadvisor sites */
+
+.footer__s2 {
+    border-top: 1px solid #ccc;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer__s2 p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+
+/* Copyright */
+
+.copyright {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 13px;
+    color: #555;
+}
+
+
+/* TAB VIEW */
+
+@media screen and (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .header__s1 {
+        gap: 15px;
+    }
+
+    .header__logo img {
+        width: 150px;
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .nav-container__s3 {
+        width: 90%;
+    }
+
+    .imagecard,
+    .categories,
+    .recommended,
+    .recommanded__container,
+    .inspiration {
+        width: 90%;
+    }
+
+    .imagecard__s1 > div {
+        min-width: 180px;
+    }
+
+    .imagecard__s2__content {
+        width: 70%;
+    }
+
+    .categories__image {
+        overflow-x: auto;
+    }
+
+    .categories__image > div {
+        min-width: 220px;
+    }
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+
+/* MOBILE VIEW */
+
+@media screen and (max-width: 600px) {
+
+    .header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .header__logo img {
+        width: 130px;
+    }
+
+    .header__s1 {
+        display: none;
+    }
+
+    .header__s2 {
+        margin-left: auto;
+    }
+
+    .header__s3 button {
+        padding: 9px 15px;
+        font-size: 13px;
+    }
+
+
+    /* Navigation */
+
+    .nav-container {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .nav-container__s1 h1 {
+        font-size: 34px;
+    }
+
+    .nav-container__s2 {
+        gap: 15px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .nav-container__s2 p {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    .nav-container__s3 {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        flex-wrap: wrap;
+        border-radius: 15px;
+    }
+
+    .nav-container__s3 > i {
+        margin-left: 10px;
+    }
+
+    .nav-container__s3__input {
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .nav-container__s3__aibtn,
+    .nav-container__s3__searchbtn {
+        margin-top: 5px;
+    }
+
+
+    /* Image card */
+
+    .imagecard {
+        width: 90%;
+        margin-top: 35px;
+    }
+
+    .imagecard__s1 {
+        overflow-x: auto;
+    }
+
+    .imagecard__s1 > div {
+        min-width: 160px;
+        height: 200px;
+    }
+
+    .imagecard__s2 {
+        min-height: 320px;
+    }
+
+    .imagecard__s2__content {
+        width: 100%;
+
+        padding: 50px 25px;
+    }
+
+    .imagecard__s2__content h1 {
+        font-size: 30px;
+    }
+
+    .imagecard__s2__content p {
+        font-size: 15px;
+    }
+
+
+    /* Categories */
+
+    .categories {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .categories h2 {
+        font-size: 25px;
+    }
+
+    .categories__image {
+        overflow-x: auto;
+    }
+
+    .categories__image > div {
+        min-width: 210px;
+        height: 230px;
+    }
+
+
+    /* Recommendation */
+
+    .recommended {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .recommended h2 {
+        font-size: 25px;
+    }
+
+    .recommanded__container {
+        width: 90%;
+    }
+
+    .chennai {
+        min-width: 240px;
+    }
+
+
+    /* Inspiration */
+
+    .inspiration {
+        width: 90%;
+        margin-top: 60px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .inspiration > h3 {
+        position: absolute;
+        font-size: 25px;
+    }
+
+    .inspiration__images {
+        min-width: 220px;
+        margin-top: 55px;
+        height: 280px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer__s1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer__s1 p {
+        font-size: 13px;
+    }
+
+}
+
